@@ -98,3 +98,23 @@ document.querySelectorAll('.galeria').forEach(function(g){
     try{fbq('trackCustom','VideoTriton370');}catch(err){} try{gtag('event','video_play',{item:'Triton 370'});}catch(err){}
   });
 })();
+
+(function(){
+  document.querySelectorAll('.v360').forEach(function(el){
+    var pasta=el.dataset.pasta,n=+el.dataset.total,img=el.querySelector('img'),fr=[],carregou=false,i=0,x0=null,i0=0,auto=null;
+    function src(k){return pasta+'/'+(k<10?'0':'')+k+'.webp';}
+    function carrega(){if(carregou)return;carregou=true;for(var k=0;k<n;k++){var im=new Image();im.src=src(k);fr.push(im);}}
+    function mostra(k){i=Math.max(0,Math.min(n-1,k));img.src=src(i);}
+    function para(){if(auto){clearInterval(auto);auto=null;}}
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){carrega();io.disconnect();
+        var d=1;setTimeout(function(){auto=setInterval(function(){var k=i+d;if(k>=n-1||k<=0)d=-d;mostra(k);if(i===0)para();},90);},700);}});},{rootMargin:'300px'});
+      io.observe(el);
+    } else carrega();
+    el.addEventListener('pointerdown',function(e){carrega();para();x0=e.clientX;i0=i;el.classList.add('usou');try{el.setPointerCapture(e.pointerId);}catch(err){}});
+    el.addEventListener('pointermove',function(e){if(x0===null)return;var dx=e.clientX-x0;mostra(i0-Math.round(dx/(el.clientWidth/n*1.6)));});
+    function fim(){x0=null;}
+    el.addEventListener('pointerup',fim);el.addEventListener('pointercancel',fim);
+    el.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){para();mostra(i-1);}if(e.key==='ArrowRight'){para();mostra(i+1);}});
+  });
+})();
