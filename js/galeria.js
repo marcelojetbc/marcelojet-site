@@ -85,3 +85,16 @@ document.querySelectorAll('.galeria').forEach(function(g){
   if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) parado=true;
   mostra(); auto();
 })();
+
+(function(){
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('.video-slide'); if(!b) return;
+    var m=document.createElement('div'); m.className='video-modal';
+    m.innerHTML='<video src="'+b.dataset.video+'" controls autoplay playsinline></video><button type="button" aria-label="Fechar vídeo">×</button>';
+    function fecha(){var v=m.querySelector('video'); v.pause(); m.remove(); document.removeEventListener('keydown',esc);}
+    function esc(ev){if(ev.key==='Escape') fecha();}
+    m.addEventListener('click',function(ev){if(ev.target===m||ev.target.tagName==='BUTTON') fecha();});
+    document.addEventListener('keydown',esc); document.body.appendChild(m);
+    try{fbq('trackCustom','VideoTriton370');}catch(err){} try{gtag('event','video_play',{item:'Triton 370'});}catch(err){}
+  });
+})();
