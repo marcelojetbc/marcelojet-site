@@ -30,6 +30,12 @@ fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2626502271122110&ev=PageView&noscript=1"></noscript>
 <!-- Fim Meta Pixel -->
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20BYLPZGGH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-20BYLPZGGH');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('wa.me')>-1){var c=a.closest('article'),t=c&&c.querySelector('h3');gtag('event','clique_whatsapp',{item:(t?t.textContent:a.textContent).trim().slice(0,90),pagina:location.pathname})}
+else if(h.indexOf('instagram.com')>-1){gtag('event','clique_instagram',{pagina:location.pathname})}},true);</script>
 </head>
 <body>
 <header class="topo faixa">
