@@ -268,6 +268,7 @@ a.local em{font-style:normal;color:#1C8FC0;font-weight:700;font-size:.85rem}
 @media (max-width:860px){.outras,.dois,.oportunidades .grade.tres,.oportunidades .grade.cinco{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.outras,.dois{grid-template-columns:1fr}}
 
+.mosaico .m1 img{object-position:50% 8%}
 /* todo botão que abre o WhatsApp fica verde */
 a.botao[href*="wa.me"]{background:var(--zap);color:#fff;border:0}
 /* menu com submenu de cotas */
