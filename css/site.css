@@ -650,6 +650,11 @@ html{scroll-behavior:smooth}
 @media (max-width:700px){
   .clube{align-items:flex-end;padding:0}
   .clube-caixa{width:100%;border-radius:24px 24px 0 0;padding:24px 20px calc(14px + env(safe-area-inset-bottom));transform:translateY(100%)}
-  .clube h2{font-size:1.35rem}
-  .clube li{padding:8px 12px;font-size:.88rem}
+  .clube-caixa{max-height:94vh;overflow-y:auto;padding-top:20px}
+  .clube h2{font-size:1.25rem;margin:10px 0 6px}
+  .clube p{font-size:.86rem;margin-bottom:10px}
+  .clube ul{gap:5px;margin-bottom:14px}
+  .clube li{padding:6px 12px;font-size:.86rem;border-radius:10px}
+  .clube li span{font-size:1rem}
+  .clube-btn{padding:13px 16px}
 }

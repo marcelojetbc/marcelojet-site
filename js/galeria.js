@@ -135,7 +135,7 @@ document.querySelectorAll('.galeria').forEach(function(g){
       '<span class="clube-tag">Clube do Mar | Marcelo Jet</span>'+
       '<h2>Veja as oportunidades antes de todo mundo</h2>'+
       '<p>Comunidade gratuita no WhatsApp. Tudo é anunciado primeiro lá e só depois no Instagram.</p>'+
-      '<ul><li><span>🚤</span>Jets, lanchas e cotas à venda</li><li><span>🌊</span>Aluguel de embarcações</li><li><span>🎓</span>Escola náutica (Arrais e Motonauta)</li><li><span>⚓</span>Guarda de jet em marina</li><li><span>🎉</span>Eventos náuticos da região</li></ul>'+
+      '<ul><li><span>🚤</span>Venda de jets e lanchas</li><li><span>🤝</span>Cotas náuticas (Boatlux)</li><li><span>⏳</span>Oportunidades antes da temporada</li><li><span>🌊</span>Aluguel de embarcações</li><li><span>🎓</span>Escola náutica</li><li><span>⚓</span>Guarda de Jet</li><li><span>🎉</span>Eventos náuticos na região</li></ul>'+
       '<a class="clube-btn" href="'+LINK+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg>Entrar no Clube do Mar</a>'+
       '<button type="button" class="clube-nao">Agora não</button></div>';
     document.body.appendChild(o); requestAnimationFrame(function(){o.classList.add('on')});
