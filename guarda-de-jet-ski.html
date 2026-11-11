@@ -32,9 +32,9 @@ fbq('track','PageView');
 <!-- Fim Meta Pixel -->
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-20BYLPZGGH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-20BYLPZGGH');
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-20BYLPZGGH');gtag('config','AW-18568251454');
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
-if(h.indexOf('wa.me')>-1){var c=a.closest('article'),t=c&&c.querySelector('h3');gtag('event','clique_whatsapp',{item:(t?t.textContent:a.textContent).trim().slice(0,90),pagina:location.pathname})}
+if(h.indexOf('wa.me')>-1){var c=a.closest('article'),t=c&&c.querySelector('h3');gtag('event','conversion',{send_to:'AW-18568251454/K5N5CMKY-7UdEL6QhJZF'});gtag('event','clique_whatsapp',{item:(t?t.textContent:a.textContent).trim().slice(0,90),pagina:location.pathname})}
 else if(h.indexOf('instagram.com')>-1){gtag('event','clique_instagram',{pagina:location.pathname})}},true);</script>
 <!-- Microsoft Clarity -->
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zbn6weu3ky");</script>
