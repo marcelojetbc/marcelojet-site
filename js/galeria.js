@@ -22,6 +22,7 @@ document.querySelectorAll('.galeria').forEach(function(g){
   if(lerL(K)==='lido'){document.documentElement.classList.add('art-lido');return;}
   if(lerL(K+'_x')||lerS(K+'_s'))return;
   setTimeout(function(){
+    if(window.__clubeVai) return;
     var w=document.createElement('div');w.className='notif';w.setAttribute('role','status');
     w.innerHTML='<a class="notif-link" href="'+ART+'"><span class="notif-ico" aria-hidden="true">MJ</span><span class="notif-txt"><span class="notif-top"><b>MARCELO JET</b><i>agora</i></span><strong>Cota vale a pena? Veja a conta</strong><span>O dinheiro que sobra pode pagar o custo fixo. Veja a conta com lanchas e jets reais.</span></span></a><button class="notif-x" type="button" aria-label="Fechar">&times;</button>';
     document.body.appendChild(w);grava(K+'_s','1',true);
@@ -117,4 +118,40 @@ document.querySelectorAll('.galeria').forEach(function(g){
     el.addEventListener('pointerup',fim);el.addEventListener('pointercancel',fim);
     el.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){para();mostra(i-1);}if(e.key==='ArrowRight'){para();mostra(i+1);}});
   });
+})();
+
+(function(){
+  var LINK='https://chat.whatsapp.com/HglJcE6iFeTETSwFQysb6a', K='mj_clube';
+  function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function grava(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  var entrou=ler(K+'_ok'), fechou=+ler(K+'_x')||0;
+  if(entrou || (Date.now()-fechou) < 7*864e5) return;
+  window.__clubeVai=true;
+  var feito=false;
+  function abre(){
+    if(feito) return; feito=true; window.removeEventListener('scroll',rola);
+    var o=document.createElement('div'); o.className='clube'; o.setAttribute('role','dialog'); o.setAttribute('aria-modal','true'); o.setAttribute('aria-label','Clube do Mar');
+    o.innerHTML='<div class="clube-caixa"><button type="button" class="clube-x" aria-label="Fechar">&times;</button>'+
+      '<span class="clube-tag">Clube do Mar | Marcelo Jet</span>'+
+      '<h2>Veja as oportunidades antes de todo mundo</h2>'+
+      '<p>Comunidade gratuita no WhatsApp. Tudo é anunciado primeiro lá e só depois no Instagram.</p>'+
+      '<ul><li><span>🚤</span>Jets, lanchas e cotas à venda</li><li><span>🌊</span>Aluguel de embarcações</li><li><span>🎓</span>Escola náutica (Arrais e Motonauta)</li><li><span>⚓</span>Guarda de jet em marina</li><li><span>🎉</span>Eventos náuticos da região</li></ul>'+
+      '<a class="clube-btn" href="'+LINK+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg>Entrar no Clube do Mar</a>'+
+      '<button type="button" class="clube-nao">Agora não</button></div>';
+    document.body.appendChild(o); requestAnimationFrame(function(){o.classList.add('on')});
+    try{gtag('event','clube_popup_visto')}catch(e){}
+    function fecha(){grava(K+'_x',String(Date.now())); o.classList.remove('on'); setTimeout(function(){o.remove()},350); document.removeEventListener('keydown',esc);}
+    function esc(e){if(e.key==='Escape') fecha();}
+    o.querySelector('.clube-x').onclick=fecha; o.querySelector('.clube-nao').onclick=fecha;
+    o.addEventListener('click',function(e){if(e.target===o) fecha();});
+    document.addEventListener('keydown',esc);
+    o.querySelector('.clube-btn').addEventListener('click',function(){
+      grava(K+'_ok','1');
+      try{fbq('trackCustom','EntrarClubeDoMar',{pagina:location.pathname})}catch(e){}
+      try{gtag('event','entrar_clube_do_mar',{pagina:location.pathname})}catch(e){}
+      setTimeout(function(){o.remove()},300);
+    });
+  }
+  function rola(){var h=document.documentElement; if((h.scrollTop+innerHeight)/h.scrollHeight>0.5) abre();}
+  setTimeout(abre,10000); window.addEventListener('scroll',rola,{passive:true});
 })();
