@@ -120,6 +120,15 @@ document.querySelectorAll('.galeria').forEach(function(g){
   });
 })();
 
+(function(){document.querySelectorAll('.jz-bc').forEach(function(c){
+  var f=c.querySelectorAll('.jz-f'),pc=c.querySelectorAll('.jz-p'),pt=c.querySelectorAll('.pontos i'),n=f.length,i=1;
+  function vai(k){i=(k+n)%n;f.forEach(function(x,j){x.classList.toggle('on',j===i)});pc.forEach(function(x,j){x.hidden=j!==i});pt.forEach(function(x,j){x.classList.toggle('on',j===i)});}
+  c.querySelector('.seta.ant').onclick=function(){vai(i-1)};c.querySelector('.seta.prox').onclick=function(){vai(i+1)};
+  var box=c.querySelector('.jz-fotos'),x0=null;
+  box.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  box.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)vai(d<0?i+1:i-1);x0=null});
+});})();
+
 (function(){
   var LINK='https://chat.whatsapp.com/HglJcE6iFeTETSwFQysb6a', K='mj_clube';
   function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
