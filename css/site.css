@@ -216,6 +216,10 @@ footer .miolo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
 .resumo-cidade li{background:var(--gelo);border:1px solid var(--linha);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:700}
 .lancha.destaque-unico{max-width:760px;margin:40px auto 0}
 .jets-zero .grade.um{grid-template-columns:minmax(0,420px);justify-content:center}
+.jets-zero .grade.dois-jz{grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;margin-top:22px}
+.jz-mais{margin-top:46px}.jz-mais h3{font-size:1.45rem;margin:0 0 4px}.jz-mais p{margin:0}
+.jz-op{font-size:.85rem}.jz-op b{color:var(--texto)}
+@media (max-width:900px){.jets-zero .grade.dois-jz{grid-template-columns:1fr}}
 .oportunidades .grade.tres{grid-template-columns:repeat(3,1fr)}
 .oportunidades .grade.cinco{grid-template-columns:repeat(3,1fr)}
 .outras{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:36px}
