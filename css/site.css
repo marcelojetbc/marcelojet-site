@@ -255,6 +255,7 @@ a.local em{font-style:normal;color:#1C8FC0;font-weight:700;font-size:.85rem}
 .preco{display:flex;flex-direction:column;gap:2px;color:var(--texto)}
 .preco strong{font-family:var(--f-titulo);font-size:1.35rem;font-weight:700;line-height:1.15;font-variant-numeric:tabular-nums}
 .preco .de{font-size:.82rem;text-decoration:line-through;color:var(--suave)}
+.preco .cota-rot{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
 .lancha .preco strong{font-size:1.6rem}
 .jet .preco{align-items:center}
 .op .preco{margin-top:6px}
