@@ -623,16 +623,15 @@ html{scroll-behavior:smooth}
 .video-modal video{max-height:92vh;max-width:100%;border-radius:16px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 .video-modal button{position:absolute;top:12px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
 
-.capa-dupla{display:grid;grid-template-columns:1fr 1fr;width:100%;height:100%;position:relative;overflow:hidden}
-.capa-dupla .cd-lado{position:relative;overflow:hidden;min-height:0}
-.capa-dupla .cd-lancha img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.15)}
-.capa-dupla .cd-jet{background:radial-gradient(circle at 50% 60%,#FFFFFF 0%,#E3F2FB 55%,#BFE3F5 100%);display:flex;align-items:center;justify-content:center}
-.capa-dupla .cd-jet img{width:112%;max-width:none;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 14px 16px rgba(14,35,80,.25))}
-.capa-dupla::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.15)}
-.capa-dupla i{position:absolute;left:10px;bottom:10px;font-style:normal;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(14,35,80,.85);color:#fff;padding:4px 9px;white-space:nowrap;border-radius:999px}
-.item-art .capa-dupla{min-height:200px}
-.item-art .capa-dupla img{min-height:0}
-@media (max-width:700px){.item-art .capa-dupla{height:210px;min-height:0}}
+.capa-cena{position:relative;width:100%;height:100%;overflow:hidden;background:#0E3B5C}
+.capa-cena .cc-lancha{width:100%;height:100%;object-fit:cover;object-position:40% 50%;display:block}
+.capa-cena .cc-jet{position:absolute;right:-2%;bottom:-6%;width:52%;height:auto;max-width:none;min-height:0;object-fit:contain;filter:drop-shadow(0 18px 14px rgba(0,20,40,.45)) saturate(1.05)}
+.capa-cena::after{content:"";position:absolute;inset:auto 0 0 0;height:35%;background:linear-gradient(to top,rgba(5,30,55,.35),transparent);pointer-events:none}
+.capa-cena i{position:absolute;left:12px;top:12px;z-index:2;font-style:normal;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#C9A14A;color:#fff;padding:5px 11px;border-radius:999px}
+.capa-cena .cc-jet{z-index:1}
+.item-art .capa-cena{min-height:200px}
+.item-art .capa-cena .cc-jet{width:62%;right:-6%;bottom:-8%}
+@media (max-width:700px){.item-art .capa-cena{height:210px;min-height:0}.item-art .capa-cena .cc-jet{width:48%}}
 
 .lista-art2{margin:0;padding-left:20px;display:grid;gap:8px}
 .lista-art2 li{line-height:1.5}
