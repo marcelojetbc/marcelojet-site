@@ -91,6 +91,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* nível 1: lanchas zero */
 .lanchas .grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
 .lanchas .grade .dados dt{letter-spacing:.04em}
+.na-marina{display:flex;flex-direction:column;gap:4px;background:#E9F8EF;border:1.5px solid #1FA855;border-radius:14px;padding:12px 14px;margin:2px 0 8px}
+.na-marina b{color:#14874A;font-size:.98rem}
+.na-marina span{font-size:.9rem;color:var(--texto)}
+.na-marina a{align-self:flex-start;margin-top:4px;background:#1FA855;color:#fff;font-weight:700;font-size:.85rem;padding:8px 16px;border-radius:999px;text-decoration:none}
 .cond-pag{margin:-4px 0 8px;font-weight:700;color:#1C8FC0;font-size:.95rem}
 @media (max-width:1100px) and (min-width:901px){.lanchas .grade{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .lancha{background:var(--branco);border:1.5px solid var(--linha);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 40px -26px rgba(19,40,92,.55);min-width:0}
@@ -620,6 +624,7 @@ html{scroll-behavior:smooth}
 
 .lista-art2{margin:0;padding-left:20px;display:grid;gap:8px}
 .lista-art2 li{line-height:1.5}
+.na-marina.art{margin:0}
 .simula-col p{margin:0;font-size:.98rem}
 
 /* ---------- escola náutica ---------- */
