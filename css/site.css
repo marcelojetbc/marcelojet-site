@@ -642,6 +642,9 @@ html{scroll-behavior:smooth}
 .menu-mob a.mob-escola{grid-column:span 2}
 @media (max-width:900px){.cursos{grid-template-columns:1fr}.mapa-escola{aspect-ratio:4/3}}
 
+.foto-ajuste .trilho img{filter:brightness(1.06) contrast(1.1) saturate(1.18)}
+.cond-venda{margin:-2px 0 10px;padding:10px 14px;background:#E9F8EF;border:1.5px solid #1FA855;border-radius:12px;color:#14874A;font-weight:700;font-size:.92rem}
+.venda-lancha + .venda-lancha{margin-top:36px}
 /* ---------- lanchas à venda ---------- */
 .venda-lancha .trilho{aspect-ratio:1/1}
 @media (max-width:700px){.venda-lancha .trilho{aspect-ratio:4/5}}
