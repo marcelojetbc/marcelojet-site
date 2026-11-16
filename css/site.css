@@ -618,6 +618,10 @@ html{scroll-behavior:smooth}
 .video-modal video{max-height:92vh;max-width:100%;border-radius:16px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 .video-modal button{position:absolute;top:12px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
 
+.lista-art2{margin:0;padding-left:20px;display:grid;gap:8px}
+.lista-art2 li{line-height:1.5}
+.simula-col p{margin:0;font-size:.98rem}
+
 /* ---------- escola náutica ---------- */
 .selo-escola{display:inline-block;background:#0D3B8C;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:10px}
 .cursos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px}
