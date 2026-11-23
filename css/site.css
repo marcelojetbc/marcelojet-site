@@ -715,3 +715,4 @@ html{scroll-behavior:smooth}
 .selo.bf-selo{background:#C62828;color:#fff}
 .bf-card{outline:3px solid #C62828;outline-offset:-3px;scroll-margin-top:90px}
 .preco .bf-tag{display:inline-block;align-self:flex-start;margin-top:4px;background:#FDECEA;color:#B71C1C;font-size:.78rem;font-weight:700;padding:3px 8px;border-radius:4px}
+.venda-lancha{scroll-margin-top:90px}
