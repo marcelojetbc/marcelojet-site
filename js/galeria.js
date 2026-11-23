@@ -22,7 +22,7 @@ document.querySelectorAll('.galeria').forEach(function(g){
   if(lerL(K)==='lido'){document.documentElement.classList.add('art-lido');return;}
   if(lerL(K+'_x')||lerS(K+'_s'))return;
   setTimeout(function(){
-    if(window.__clubeVai) return;
+    if(window.__clubeVai || /^#lancha-/.test(location.hash)) return;
     var w=document.createElement('div');w.className='notif';w.setAttribute('role','status');
     w.innerHTML='<a class="notif-link" href="'+ART+'"><span class="notif-ico" aria-hidden="true">MJ</span><span class="notif-txt"><span class="notif-top"><b>MARCELO JET</b><i>agora</i></span><strong>Cota vale a pena? Veja a conta</strong><span>O dinheiro que sobra pode pagar o custo fixo. Veja a conta com lanchas e jets reais.</span></span></a><button class="notif-x" type="button" aria-label="Fechar">&times;</button>';
     document.body.appendChild(w);grava(K+'_s','1',true);
@@ -136,6 +136,7 @@ document.querySelectorAll('.galeria').forEach(function(g){
   function lerS(k){try{return sessionStorage.getItem(k)}catch(e){return null}}
   function gravaS(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
   if(lerS(K+'_visto')) return;
+  if(/^#lancha-/.test(location.hash)) return;
   window.__clubeVai=true;
   var feito=false;
   function abre(){
@@ -164,4 +165,19 @@ document.querySelectorAll('.galeria').forEach(function(g){
   }
   function rola(){var h=document.documentElement; if((h.scrollTop+innerHeight)/h.scrollHeight>0.5) abre();}
   setTimeout(abre,10000); window.addEventListener('scroll',rola,{passive:true});
+})();
+
+(function(){
+  var h=location.hash; if(!h||h.length<2) return;
+  var el=null; try{el=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){}
+  if(!el) return;
+  try{if('scrollRestoration' in history) history.scrollRestoration='manual'}catch(e){}
+  var parou=false;
+  function para(){parou=true}
+  ['wheel','touchmove','keydown','mousedown'].forEach(function(t){window.addEventListener(t,para,{passive:true,once:true})});
+  function topo(){var hd=document.querySelector('header');if(!hd)return 12;var p=getComputedStyle(hd).position;return (p==='fixed'||p==='sticky')?hd.getBoundingClientRect().height+12:12}
+  function vai(){if(parou)return;var y=el.getBoundingClientRect().top+window.pageYOffset-topo();window.scrollTo(0,Math.max(0,y))}
+  vai();[120,400,900,1600,2500,3500].forEach(function(t){setTimeout(vai,t)});
+  window.addEventListener('load',function(){vai();setTimeout(vai,500)});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(vai);
 })();
