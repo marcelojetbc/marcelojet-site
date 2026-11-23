@@ -706,13 +706,3 @@ html{scroll-behavior:smooth}
 @media (min-width:1001px) and (max-width:1470px){.marcas{gap:10px;flex:none}.marcas .x{display:none}.marcas .mj{width:150px}.marcas .bl{width:92px}.menu{gap:10px;font-size:.68rem}}
 @media (min-width:1001px) and (max-width:1290px){.marcas .mj{width:130px}.marcas .bl{width:80px}.menu{gap:9px;font-size:.64rem;letter-spacing:.03em}.topo-acoes .botao{padding-left:14px;padding-right:14px}}
 @media (min-width:1001px) and (max-width:1130px){.menu{gap:7px;font-size:.6rem;letter-spacing:.02em}.ig-topo{display:none}.marcas .mj{width:116px}.marcas .bl{width:72px}}
-
-/* Black November (some sozinho depois de 30/11) */
-.bf-faixa{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;padding:12px 18px;background:#B71C1C;color:#fff;text-decoration:none;text-align:center;font-size:.95rem;line-height:1.35}
-.bf-faixa strong{letter-spacing:.06em;text-transform:uppercase}
-.bf-faixa b{font-size:1.05rem}
-.bf-faixa em{font-style:normal;font-weight:700;background:#fff;color:#B71C1C;padding:4px 12px;border-radius:999px;white-space:nowrap}
-.selo.bf-selo{background:#C62828;color:#fff}
-.bf-card{outline:3px solid #C62828;outline-offset:-3px;scroll-margin-top:90px}
-.preco .bf-tag{display:inline-block;align-self:flex-start;margin-top:4px;background:#FDECEA;color:#B71C1C;font-size:.78rem;font-weight:700;padding:3px 8px;border-radius:4px}
-.venda-lancha{scroll-margin-top:90px}
