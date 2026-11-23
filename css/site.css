@@ -639,6 +639,32 @@ html{scroll-behavior:smooth}
 .na-marina.art{margin:0}
 .simula-col p{margin:0;font-size:.98rem}
 
+/* escola: visual dos stories (marina + painel azul) */
+.hero-escola{position:relative}
+.hero-escola::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,31,73,.62) 0%,rgba(14,31,73,.42) 45%,rgba(14,31,73,.78) 100%)}
+.hero-escola h1,.hero-escola .he-sub,.hero-escola .trilha{text-shadow:0 2px 14px rgba(0,0,0,.65),0 0 2px rgba(0,0,0,.5)}
+@media (max-width:700px){.hero-escola::before{background:rgba(14,31,73,.72)}}
+.hero.hero-escola::after{display:none}
+.hero-escola .miolo{position:relative}
+.he-titulo{display:flex;align-items:center;gap:18px;margin:6px 0 4px}
+.he-barco{color:#fff;flex:none;padding-right:18px;border-right:2px solid rgba(255,255,255,.7)}
+.he-titulo h1{margin:0;color:#fff;line-height:1.05}
+.he-titulo h1 em{font-style:normal;color:var(--ciano)}
+.he-sub{color:#fff;font-style:italic;font-size:1.15rem;margin:10px 0 22px}
+.painel-escola-sec{padding-top:36px}
+.painel-escola{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#0E1F49;color:#fff;border:2px solid var(--ciano);border-radius:26px;padding:28px 10px;box-shadow:0 0 0 4px rgba(92,207,244,.15),0 18px 40px -18px rgba(14,31,73,.6)}
+.pe-col{padding:4px 30px}
+.pe-col+.pe-col{border-left:1.5px solid rgba(92,207,244,.6)}
+.pe-tit{display:flex;align-items:center;gap:12px;font-family:var(--f-texto);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.2rem;color:#fff;margin:0 0 14px}
+.pe-ico{color:var(--ciano);display:flex;padding-right:12px;border-right:1.5px solid rgba(255,255,255,.6)}
+.painel-escola ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.painel-escola li{position:relative;padding-left:22px;font-size:1.12rem}
+.painel-escola li::before{content:"";position:absolute;left:2px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--ciano)}
+.pe-aviso{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:#fff;color:#0E1F49;border-radius:18px;padding:18px 22px 18px 26px;margin-top:22px;border-left:6px solid var(--ciano);box-shadow:0 12px 30px -16px rgba(14,31,73,.45)}
+.pe-aviso p{margin:0;font-size:1.15rem;max-width:620px;color:#0E1F49}
+.pe-intro{margin:22px auto 0;text-align:center;max-width:760px;color:var(--suave)}
+@media (max-width:700px){.painel-escola{grid-template-columns:1fr;padding:22px 4px}.pe-col{padding:4px 20px}.pe-col+.pe-col{border-left:0;border-top:1.5px solid rgba(92,207,244,.6);margin-top:16px;padding-top:18px}.he-barco svg{width:44px;height:28px}.he-titulo{gap:12px}.he-barco{padding-right:12px}.pe-aviso p{font-size:1.02rem}}
+
 /* ---------- escola náutica ---------- */
 .selo-escola{display:inline-block;background:#0D3B8C;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:10px}
 .cursos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px}
