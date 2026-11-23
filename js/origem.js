@@ -26,3 +26,13 @@
     a.setAttribute('href', partes[0] + '?text=' + encodeURIComponent(texto + marca));
   }, true);
 })();
+
+/* Black November: tira a faixa e o selo da promoção a partir de 01/12/2026 (horário de Brasília). */
+(function(){
+  if (Date.now() < Date.parse('2026-12-01T00:00:00-03:00')) return;
+  function limpar(){
+    document.querySelectorAll('.bf-faixa,.bf-tag').forEach(function(el){ el.remove(); });
+    document.querySelectorAll('.bf-selo').forEach(function(el){ el.textContent = 'Oportunidade'; el.classList.remove('bf-selo'); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', limpar); else limpar();
+})();
