@@ -735,10 +735,18 @@ html{scroll-behavior:smooth}
 }
 
 .lancha-op{scroll-margin-top:96px}
-.lancha-op.op-bf{outline:3px solid #F5B301;outline-offset:-3px;border-radius:20px;box-shadow:0 18px 40px -20px rgba(245,179,1,.55)}
-.selo.selo-bf{background:#111;color:#F5B301;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.preco-bf .bf-tag{display:inline-block;align-self:flex-start;background:#111;color:#F5B301;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:4px}
+.lancha-op.op-bf{outline:3px solid #E10600;outline-offset:-3px;border-radius:20px;box-shadow:0 18px 40px -20px rgba(225,6,0,.55)}
+.selo.selo-bf{background:#111;color:#fff;border:2px solid #E10600;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.preco-bf .bf-tag{display:inline-block;align-self:flex-start;background:#E10600;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:4px}
 .preco-bf .de{text-decoration:line-through}
+#lanchas-oportunidade{scroll-margin-top:96px}
+.menu-mob a.mob-bf{grid-column:1/-1;display:flex;align-items:center;justify-content:center;background:#E10600;color:#fff;font-weight:800;border-color:#E10600;animation:bf-pulsa 2.2s ease-in-out infinite}
+.bf-barra{display:none;justify-content:center;padding:12px 16px;background:#fff}
+.bf-barra a{display:inline-flex;align-items:center;gap:8px;background:#E10600;color:#fff;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;padding:11px 26px;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px -12px rgba(225,6,0,.8);animation:bf-pulsa 2.2s ease-in-out infinite}
+.bf-barra a:hover{background:#B80500}
+@media (min-width:1001px){.bf-barra{display:flex}}
+@keyframes bf-pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+@media (prefers-reduced-motion:reduce){.bf-barra a,.menu-mob a.mob-bf{animation:none}}
 .lancha-op:target{box-shadow:0 0 0 4px #2EC5E8,0 20px 40px -18px rgba(14,31,73,.5);border-radius:20px;animation:alvo-pisca 1.2s ease-in-out 2}
 @keyframes alvo-pisca{50%{box-shadow:0 0 0 8px rgba(46,197,232,.45),0 20px 40px -18px rgba(14,31,73,.5)}}
 
