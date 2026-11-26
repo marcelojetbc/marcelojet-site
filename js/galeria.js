@@ -22,7 +22,7 @@ document.querySelectorAll('.galeria').forEach(function(g){
   if(lerL(K)==='lido'){document.documentElement.classList.add('art-lido');return;}
   if(lerL(K+'_x')||lerS(K+'_s'))return;
   setTimeout(function(){
-    if(window.__clubeVai || /^#lancha-/.test(location.hash)) return;
+    if(window.__clubeVai || /^#lancha/.test(location.hash)) return;
     var w=document.createElement('div');w.className='notif';w.setAttribute('role','status');
     w.innerHTML='<a class="notif-link" href="'+ART+'"><span class="notif-ico" aria-hidden="true">MJ</span><span class="notif-txt"><span class="notif-top"><b>MARCELO JET</b><i>agora</i></span><strong>Cota vale a pena? Veja a conta</strong><span>O dinheiro que sobra pode pagar o custo fixo. Veja a conta com lanchas e jets reais.</span></span></a><button class="notif-x" type="button" aria-label="Fechar">&times;</button>';
     document.body.appendChild(w);grava(K+'_s','1',true);
@@ -136,7 +136,7 @@ document.querySelectorAll('.galeria').forEach(function(g){
   function lerS(k){try{return sessionStorage.getItem(k)}catch(e){return null}}
   function gravaS(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}
   if(lerS(K+'_visto')) return;
-  if(/^#lancha-/.test(location.hash)) return;
+  if(/^#lancha/.test(location.hash)) return;
   window.__clubeVai=true;
   var feito=false;
   function abre(){
