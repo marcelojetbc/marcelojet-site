@@ -646,6 +646,7 @@ html{scroll-behavior:smooth}
 .tab-box.fit::after,.tab-box.fit::before{display:none!important}
 .capa.capa-a3 img{object-position:50% 52%}
 .item-art img.capa-img.a3{object-position:50% 50%}
+@media (min-width:701px){.item-art>img{height:0;min-height:100%}}
 
 /* escola: visual dos stories (referência: arte JetHouse) */
 .hero-esc2{background:linear-gradient(180deg,#0A3C8C 0%,#1167C8 55%,#2B8FE0 100%);color:#fff;padding-block:clamp(36px,6vw,64px) clamp(70px,9vw,110px);position:relative;overflow:hidden}
