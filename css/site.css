@@ -639,6 +639,14 @@ html{scroll-behavior:smooth}
 .na-marina.art{margin:0}
 .simula-col p{margin:0;font-size:.98rem}
 
+.comparativo.cmp-fit{min-width:0}
+.comparativo.cmp-fit td{white-space:normal}
+.comparativo.cmp-fit td small{display:block;font-weight:400;font-size:.75rem;color:var(--suave)}
+@media (max-width:600px){.comparativo.cmp-fit{font-size:.86rem}.comparativo.cmp-fit th,.comparativo.cmp-fit td{padding:10px 9px}}
+.tab-box.fit::after,.tab-box.fit::before{display:none!important}
+.capa.capa-a3 img{object-position:50% 52%}
+.item-art img.capa-img.a3{object-position:50% 50%}
+
 /* escola: visual dos stories (referência: arte JetHouse) */
 .hero-esc2{background:linear-gradient(180deg,#0A3C8C 0%,#1167C8 55%,#2B8FE0 100%);color:#fff;padding-block:clamp(36px,6vw,64px) clamp(70px,9vw,110px);position:relative;overflow:hidden}
 .he2-txt{text-align:left}.he2-txt .trilha{justify-content:flex-start}.hero-esc2 .acoes{justify-content:flex-start}
